@@ -32,17 +32,6 @@
             transition: all 0.3s ease;
         }
 
-        @media screen and (orientation: landscape) {
-            .container {
-                max-height: 80vh;
-                margin-top: 5vh;
-            }
-
-            .grid-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
         .header {
             width: 100%;
             background:
@@ -244,11 +233,6 @@
         }
 
         @media (min-width: 600px) {
-            .header {
-                padding-top: 30px;
-                height: 10vh;
-            }
-
             .logo {
                 width: 60px;
                 height: 60px;
@@ -278,6 +262,7 @@
                 margin-bottom: 5px;
             }
         }
+
     </style>
 </head>
 
@@ -319,10 +304,10 @@
 
             if (isPortrait) {
                 container.style.aspectRatio = '36/65';
-                container.style.maxWidth = 'min(80%, 360px)';
+                container.style.maxWidth = 'max(80%, 360px)';
             } else {
                 container.style.aspectRatio = '65/36';
-                container.style.maxWidth = 'min(80%, 600px)';
+                container.style.maxWidth = 'max(80%, 600px)';
             }
         }
 
